@@ -1,0 +1,22 @@
+# Spring properties
+spring:
+  application:
+    name: registration-service  # Service registers under this name
+
+error:
+  path: /error
+
+# HTTP Server
+server:
+  port: 1111   # HTTP (Tomcat) port
+
+# Discovery Server Access
+#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
+#  2. Define URL of registration server (defaultZone)
+eureka:
+  instance: localhost
+  client:
+    registerWithEureka: false
+    fetch-registry: false
+#    serviceUrl:
+#      defaultZone: http://localhost:1111/eureka/
